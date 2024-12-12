@@ -1,0 +1,241 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5faff; /* Світлий синьо-білий фон */
+    color: #333;
+    min-height: 100vh; /* Мінімальна висота сторінки */
+    box-sizing: border-box; /* Враховує padding у висоту */
+}
+
+html {
+    height: 100%; /* Гарантує повну висоту для root-елемента */
+    overflow-y: auto; /* Увімкнути вертикальний скрол */
+}
+
+/* Хедер */
+header {
+    background-color: #003366; /* Темно-синій */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    margin: 30;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #0055a5; /* Середньо-синій */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.header-image {
+    width: 10%; /* Розмір зображення */
+    height: auto; /* Автоматична пропорція */
+    border-radius: 100%; /* Округлі кути */
+    margin-top: 20px; /* Відступ зверху */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Основний контент */
+main {
+    padding: 20px 0; /* Відступ зверху і знизу */
+}
+
+/* Секція Hero */
+.hero {
+    height: 300px; /* Висота секції hero */
+    background-color: #cce6ff; /* Світло-синій */
+    text-align: center;
+}
+
+/* Слайдер */
+.slider {
+    width: 50vw; /* Ширина слайдера на 50% від ширини вікна */
+    height: calc(50vh); /* Висота слайдера: 50% висоти екрану */
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0; /* Фон на випадок відсутності зображень */
+}
+
+.slides {
+    display: flex; /* Вирівнює слайди у рядок */
+    transition: transform 0.5s ease-in-out; /* Анімація перемикання */
+    width: 100%; /* Робить контейнер під слайди повністю видимим */
+}
+
+.slides img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover; /* Обрізає зображення, зберігаючи пропорції */
+}
+
+/* Контейнер для слайдера і тексту */
+.slider-container {
+    display: flex; /* Використовуємо flexbox для розміщення слайдера і тексту поруч */
+    justify-content: space-between; /* Розташовуємо елементи по ширині */
+    align-items: center; /* Центруємо елементи по висоті */
+    width: 100%; /* Вся ширина екрану */
+    height: calc(50vh); /* Висота 50% від екрану */
+}
+
+/* Текстова частина */
+.text {
+    width: 50vw; /* Текст займає другу половину екрану */
+    padding: 20px; /* Відступи для тексту */
+    font-size: 1.2rem; /* Розмір шрифту */
+    color: #333; /* Колір тексту */
+    text-align: left; /* Вирівнювання тексту */
+}
+
+.text h3 {
+    font-size: 2rem; /* Великий заголовок */
+    margin-bottom: 20px; /* Відступ від заголовка */
+}
+
+/* Футер */
+footer {
+    height: 100px; /* Висота футера */
+    background-color: #003366; /* Темно-синій */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Соціальні іконки */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Вирівнювання по центру */
+    gap: 20px; /* Відстань між значками */
+    margin-bottom: 10px; /* Відступ між значками і текстом */
+}
+
+.social-icons a img {
+    width: 40px; /* Розмір значків */
+    height: 40px;
+    transition: transform 0.3s ease; /* Анімація при наведенні */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2); /* Збільшення при наведенні */
+}
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0); /* Початкове положення - перший слайд */
+    }
+    33.33% {
+        transform: translateX(-100%); /* Другий слайд */
+    }
+    66.66% {
+        transform: translateX(-200%); /* Третій слайд */
+    }
+    100% {
+        transform: translateX(0); /* Повернення до першого слайду */
+    }
+}
+hero {
+    background-color: #cce6ff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Секція з цуценятами */
+.puppies {
+    padding: 40px 20px;
+    background-color: #eaf7ff;
+    text-align: center;
+}
+
+.puppies h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.puppy-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.puppy-item {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.puppy-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.puppy-item h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.puppy-item p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+/* Секція інфо для усиновлення */
+.adopt-info {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f5faff;
+}
+
+.adopt-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.adopt-info p {
+    font-size: 1.2rem;
+}
+
+/* Футер */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
